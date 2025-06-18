@@ -38,7 +38,7 @@ async function handleSearch(city) {
     weather.value = await weatherResponse.json()
     forecast.value = await forecastResponse.json()
 
-    localStorage.setItem('lastCity', city.value)
+    localStorage.setItem('lastCity', city)
   } catch (err) {
     error.value = err.message
   } finally {
